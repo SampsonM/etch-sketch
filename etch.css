@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+#etch-sketch {
+  position: relative;
+  display: none;
+  grid-template: repeat(9, 1fr) / 15% repeat(10, 1fr) 16%;
+  margin: 0 auto;
+  width: 50%;
+  height: 80%;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+  font-family: 'Homemade Apple', cursive;   
+  animation: tada 1s 1; 
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%,20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,50%,70%,90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,60%,80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+#myCanvas {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  width: 100%;
+  height: 100%;
+  background-color: #d4cdbcf8;
+  z-index: 0;
+}
+
+#close {
+  grid-row: 12 / 13;
+  grid-column: 6 / 8;
+  position: relative;
+  bottom: 30px;
+  z-index: 3;
+  text-align: center;
+  border: none;
+  border-radius: 20px;
+  color: rgb(255, 208, 0);
+  background-color: #ff0000;
+  outline: none;
+  font-family: 'Homemade Apple', cursive;
+}
+
+#close:hover {
+  text-shadow: 1px 1px 2px #928c8c;
+}
+
+#etchImg {
+  position: absolute;
+  transform: scale(1.02,1.02);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 550px) {
+}
+
+@media only screen and (min-width: 800px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+@media only screen and (max-width: 300px){
+}
